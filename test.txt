@@ -1,0 +1,8 @@
+computation 1 + 1.
+computation 1 + 1 - 1 - 1.
+computation (3+11)*3-3/3.
+computation 3+11*3-3/3.
+computation (3+11-(3+5))*3-3/3.
+computation var hi <- 10; 1 + 1.
+computation var x <- 10 * 2; var y <- (x + 5) / 3; var z <- (y - 1) * 2; z + x - 5.
+computation var i <- 2 * 3; var abracadabra <- 7; (((abracadabra * i))); i - 5 - 1 .
