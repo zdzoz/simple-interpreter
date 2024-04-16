@@ -239,10 +239,13 @@ int factor(Token** toks)
         res += GET_TOKEN(toks)->num;
         EAT_TOK(toks);
         break;
-    case T_ID: { // should be in factor
-        // fprintf(stderr, "TODO: IMPLEMENT ID\n");
-        // error = 1;
-        get_id(GET_TOKEN(toks), &res);
+    case T_ID: {
+        if (!get_id(GET_TOKEN(toks), &res)) {
+            REPORT_ERROR("Unknown ");
+            PRINT_TOKEN(stderr, GET_TOKEN(toks));
+            fprintf(stderr, "\n");
+            break;
+        }
         EAT_TOK(toks);
     } break;
     default:
